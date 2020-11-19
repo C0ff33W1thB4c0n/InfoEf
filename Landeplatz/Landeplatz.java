@@ -3,6 +3,7 @@ import GLOOP.*;
 /**
  * Fabian Stens
  * 2020-11-19:18.55
+ * final: 2020-11-19:23.20 
  */
 
 public class Landeplatz {
@@ -14,7 +15,7 @@ public class Landeplatz {
     private GLTastatur tastatur;
     //GLKugel Array deklarieren
     private GLKugel [] lichter;
-    Landeplatz(){
+    public Landeplatz(){
         //Tastatur initialisieren/instanziieren
         tastatur = new GLTastatur();
         erschaffeUmgebung();
