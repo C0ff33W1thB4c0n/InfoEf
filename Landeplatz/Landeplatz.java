@@ -2,18 +2,20 @@ import GLOOP.*;
 
 /**
  * Fabian Stens
- * 2020-11-18:09.45
+ * 2020-11-19:18.55
  */
 
 public class Landeplatz {
-    //Kamera und Umgebung deklarieren
+    //Kamera, Umgebung und Tastatur deklarieren
     private GLSchwenkkamera kamera;
     private GLLicht licht;
     private GLBoden boden;
     private GLHimmel himmel;
     private GLTastatur tastatur;
+    //GLKugel Array deklarieren
     private GLKugel [] lichter;
     Landeplatz(){
+        //Tastatur initialisieren/instanziieren
         tastatur = new GLTastatur();
         erschaffeUmgebung();
         platz();
@@ -29,12 +31,14 @@ public class Landeplatz {
         himmel = new GLHimmel("textures/Himmel.jpg");
     }
     public void platz(){
+        //Landeplatz erstellen
         GLZylinder feld = new GLZylinder(0,0,0,1000,1);
         feld.drehe(90,0,0);
         feld.setzeTextur("textures/Feld.jpg");
         feld.verschiebe(0,0,0);
     }
     public void lampen(){
+        //Lampen mit dem Array Lichter erstellen und im Kreis positionieren,Leuchten lassen(weiß)
         lichter = new GLKugel[20];
         for (int i=0; i < lichter.length; i++){
             lichter[i] = new GLKugel(950,0,0,50);
@@ -43,6 +47,7 @@ public class Landeplatz {
         }
     }
     public void blinke(){
+        //Lichter blinken rot (0,1 Sekunde)
         for(int i = 0; i<lichter.length; i++){
            lichter[i].setzeSelbstleuchten(100, 0, 0);
         }
@@ -53,6 +58,7 @@ public class Landeplatz {
         Sys.warte(100);
     }
     public void starteLauflicht(){
+        //Lauflicht(rot, 0,1 Sekunde)
         for(int i = 0; i<lichter.length; i++){
            lichter[i].setzeSelbstleuchten(255, 0, 0);
            Sys.warte(100);
@@ -61,12 +67,15 @@ public class Landeplatz {
     }
     public void keyboard(){
         while(!tastatur.esc()){
+            //wenn B gedrückt, blinke
             while(tastatur.istGedrueckt('b')){
                 blinke();
             }
+            //wenn L gedrückt, starte Laufleuchte
             while(tastatur.istGedrueckt('l')){
                 starteLauflicht();
             }
+            //Steuerung
             if(tastatur.istGedrueckt('w')||tastatur.oben()){
                 kamera.verschiebe(0, 0, -1);
                 Sys.warte();

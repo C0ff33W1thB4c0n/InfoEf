@@ -1,8 +1,8 @@
 #BlueJ package file
-editor.fx.0.height=737
-editor.fx.0.width=814
-editor.fx.0.x=360
-editor.fx.0.y=28
+editor.fx.0.height=0
+editor.fx.0.width=0
+editor.fx.0.x=0
+editor.fx.0.y=0
 objectbench.height=108
 objectbench.width=1512
 package.divider.horizontal=0.6
@@ -28,5 +28,5 @@ target1.name=Landeplatz
 target1.showInterface=false
 target1.type=ClassTarget
 target1.width=90
-target1.x=140
+target1.x=80
 target1.y=20
