@@ -1,0 +1,18 @@
+#BlueJ class context
+comment0.target=Landeplatz
+comment0.text=\r\n\ Fabian\ Stens\r\n\ 2020-11-18\:09.45\r\n
+comment1.params=
+comment1.target=Landeplatz()
+comment2.params=
+comment2.target=void\ erschaffeUmgebung()
+comment3.params=
+comment3.target=void\ platz()
+comment4.params=
+comment4.target=void\ lampen()
+comment5.params=
+comment5.target=void\ blinke()
+comment6.params=
+comment6.target=void\ starteLauflicht()
+comment7.params=
+comment7.target=void\ keyboard()
+numComments=8
