@@ -1,2 +1,0 @@
-# InfoEf
-Informatik EF fa
